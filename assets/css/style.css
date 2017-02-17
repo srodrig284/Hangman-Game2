@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css?family=Glegoo');
+
+body{
+    background-color: black;
+    font-family: 'Glegoo', serif;
+    color: white;
+}
+
+.jumbotron{
+    background-color: black;
+    height: 150px;
+}
+
+.jumbotron h1{
+    color: white;
+}
+
+.wrapper {
+    margin: 0 100px 0 100px;
+}
+
+#hangman_images {
+    position: relative;
+    box-sizing: border-box;
+    overflow: hidden;
+    margin-right:30px;
+    margin-top: 40px;
+}
+
+#wins, #losses, #livesRemaining, #guess-word, #letters-used{
+    font-size: 2em;
+}
+
+.footer {
+    background-color: black;
+    text-align: center;
+    border-top: 1px solid white;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding-top: 19px;
+    box-sizing: content-box;
+}
+
+.footer, .push { /* .push must be the same height as .footer */
+    height: 40px;
+}
+
+.container-fluid {
+    border: 1px dashed yellow;
+    margin-top: 20px;
+}
+
+#start-message {
+    color: red;
+}
+
+#message{
+    color: yellow;
+}
+
+.letter {
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    float: left;
+    margin: 2px;
+}
+
+.letter-button-color {
+    color: black;
+    background-color: #00a379;
+}
+
+
+#letters-used {
+    padding-top: 30px;
+}
+
+#guess-word {
+    padding-top: 30px;
+}
+
+#clear {
+    margin-left: 20px;
+    font-size: 25px;
+    color: black;
+    border-style: solid;
+    width: 100px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Hangman</title>
+
+    <meta name="author" content="Sandra Rodriguz">
+    <meta name="description" content="Hangman">
+    <meta name="keywords" content="hangman game, hangman">
+
+    <!-- Bootstrap File -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link rel="icon" href="assets/images/Hangman-Game-red.ico">
+</head>
+
+<body>
+<div class="wrapper">
+    <div class="row">
+        <div class="col-xs-4">
+               <img src="assets/images/pokerlogo.jpg" height="150px">
+        </div>
+        <div class="col-xs-8">
+            <div class="jumbotron">
+                <h1>Hangman</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-5">
+               <div>
+                    <!--<img src="assets/images/hangman0.png">-->
+                   <img id="hangman_images">
+                </div>
+            </div>
+            <div class="col-xs-7">
+                <div class="row">
+                    <div id="start-game">
+                        <!--set box border-->
+                        <h1 id="start-message"></h1>
+                        <h1 id="message"></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">
+                        <h3>Wins</h3>
+                        <p id="wins"></p>
+                    </div>
+                    <div class="col-xs-3">
+                        <h3>Losses</h3>
+                        <p id="losses"></p>
+                    </div>
+                    <div class="col-xs-6">
+                        <h3>Lives Remaining</h3>
+                        <p id="livesRemaining"></p>
+                    </div>
+                </div>
+
+                <!--LETTER BUTTONS GO HERE-->
+                <div class="row" id="buttons">
+                    <h3>CLICK A LETTER TO GUESS POKER WORD</h3>
+                </div>
+
+                <div class="row">
+                    <p id="guess-word"></p>
+                </div>
+
+                <div class="row">
+                    <h3>Letters Used</h3>
+                    <p id="letters-used"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> <!--END .wrapper-->
+
+<div class="push"></div>
+
+<div class="footer">
+    <p>&copy; Copyright 2017 - Sandra Rodriguez</p>
+</div>
+
+
+
+<!-- Hangman link -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>
