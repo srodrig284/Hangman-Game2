@@ -206,9 +206,11 @@ $(document).ready(function() {
         pokerTerms.validateInput($(this).data('letter'));
     });
 
-    /*document.onkeyup = function (event) {
+    document.onkeyup = function (event) {
         console.log(event.key);
-        $("#start-message").hide();
-        pokerTerms.validateInput(event.key, event.keyCode);
-    };*/
+        if(event.keyCode >= 65 && event.keyCode <= 90){
+            $("#start-message").hide();
+            pokerTerms.validateInput(event.key);
+        };
+    };
 });
