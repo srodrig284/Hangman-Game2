@@ -14,6 +14,10 @@ $(document).ready(function() {
     var winAudio = document.createElement("AUDIO");   // audio when game is won
     winAudio.setAttribute("src", "assets/audio/zapsplat_multimedia_game_one_up_extra_life_005.mp3");
 
+    var taserAudio = document.createElement("AUDIO");   // audio when letter was already selected
+    taserAudio.setAttribute("src", "assets/audio/warfare_taser_gun_002.mp3");
+
+
     // letters to create buttons
     var letters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
 
@@ -145,6 +149,10 @@ $(document).ready(function() {
 
                         this.refreshRound(this.isCorrect);
                     }
+                    else{
+                        taserAudio.play();
+                        $(self).text(userInput).effect("shake");
+                    }
                 }
             }
         },
@@ -199,10 +207,14 @@ $(document).ready(function() {
 
     pokerTerms.createLetterBtns();
 
+    var self;
+
     //pushing a button or pressing a letter activates validateInput
     $(".letter-button").on('click', function() {
         $("#start-message").hide();
         //console.log($(this).data('letter'));
+        self = this;
+        //$(self).effect( "shake" );
         pokerTerms.validateInput($(this).data('letter'));
     });
 
